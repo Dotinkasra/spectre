@@ -30,3 +30,15 @@ class Config():
     @property
     def notice_channel(self, key: str) -> int:
         return str(self.config['NOTICE_CHANNEL'][key])
+    
+    @property
+    def llm_target_channel(self) -> list[int]:
+        return list(map(int, eval(self.config['CHANNEL']["LLM_TARGET_CHANNEL"])))
+    
+    @property
+    def ollama_address(self) -> str:
+        return str(self.config['OLLAMA']["ADDRESS"])
+    
+    @property
+    def ollama_model(self) -> str:
+        return str(self.config['OLLAMA']["MODEL"])

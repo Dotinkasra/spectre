@@ -8,6 +8,7 @@ from discord import Embed
 from Source.data.banlist import BanListDataBase
 from Source.env.config import Config
 
+
 japan_timezone = timezone(timedelta(hours=+9), 'Asia/Tokyo')
 config = Config()
 

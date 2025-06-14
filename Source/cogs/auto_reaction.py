@@ -11,13 +11,12 @@ from datetime import timedelta, timezone, datetime
 import base64, io
 from PIL import Image
 
+
 config = Config()
 
-admin = config.admin
-notification = config.notification
 
 class AutoReaction(commands.Cog):
-    
+
     def __init__(self, bot):
         self.bot = bot
         self.cllm = ConnectLLM()

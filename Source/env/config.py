@@ -24,17 +24,9 @@ class Config():
         return list(map(int, self.config['NOTIFICATION'].values()))
 
     @property
-    def ifttt_event(self) -> str:
-        return str(self.config['IFTTT']['EVENT'])
-
-    @property
-    def ifttt_key(self) -> str:
-        return str(self.config['IFTTT']['KEY'])
-
-    @property
-    def ubernikki(self) -> str:
-        return str(self.config['CHANNEL']['UBERNIKKI'])
-
-    @property
     def speaker(self) -> dict:
         return dict(self.config['SPEAKER'])
+
+    @property
+    def notice_channel(self, key: str) -> int:
+        return str(self.config['NOTICE_CHANNEL'][key])

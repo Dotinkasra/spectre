@@ -30,6 +30,10 @@ class Config():
     @property
     def notice_channel(self, key: str) -> int:
         return str(self.config['NOTICE_CHANNEL'][key])
+
+    @property
+    def ignore_voice_channel_log(self) -> list[int]:
+        return list(map(int, eval(self.config['CHANNEL']["IGNORE_VOICE_CHANNEL_LOG"])))
     
     @property
     def llm_target_channel(self) -> list[int]:
